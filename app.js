@@ -32,6 +32,9 @@ app.use(express.static(__dirname));
 app.get('/data', (req, res) => {
     res.send(data);
 });
+app.get('/sign-in.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'sign-in.html'));
+});
 app.post('/', (req, res) => {
     const { dat } = req.body;
     data = dat
