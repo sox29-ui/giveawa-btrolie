@@ -1,0 +1,236 @@
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(53, 39, 53);
+    overflow: hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+    transition: 0.6s;
+}
+header {
+    width: 60vw;
+    min-width: 400px;
+    background-color: rgb(75, 50, 75);
+    height: 7vh;
+    margin: 10px auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: rgb(65, 41, 65) solid 1px;
+    box-shadow: rgb(63, 41, 63) 1px 1px 5px 2px;
+}
+a {
+    color: white;
+    text-decoration-line: none;
+}
+.file {
+    transition: 1s;
+    position: absolute;
+    width: 20vw;
+    max-width: 230px;
+    min-width: 130px;
+    height: 100vh;
+    border: rgb(65, 41, 65) solid 1px;
+    box-shadow: rgb(63, 41, 63) 1px 1px 5px 2px;
+    border-radius: 0 30px 30px 0;
+    background-color: rgb(75, 50, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 20px;
+    gap: 10px;
+    padding-top: 10px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#admin {
+    transform: translateX(-100%);
+}
+#box {
+    width: calc(80% - 40px);
+    background-color: rgb(75, 50, 75);
+    border-radius: 20px;
+    border: rgb(65, 41, 65) solid 1px;
+    box-shadow: rgb(63, 41, 63) 1px 1px 10px 10px;
+    height: 100%;
+    margin-left: auto;
+    transition: 1s;
+    overflow-y: auto;
+}
+#magup {
+    transform: translateY(1000%);
+}
+#page_1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto !important;
+    transition: 0.2s;
+    gap: 20px;
+}
+#page_2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto !important;
+    transition: 0.2s;
+    gap: 20px;
+}
+#page_3 {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto !important;
+    transition: 0.2s;
+    gap: 20px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+nav h1 {
+    color: #ffffff;
+}
+#avt {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100px;
+    margin-top: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./img/habhimg.jpeg");
+}
+#proms {
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5px;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    transition: 0.2s;
+    gap: 20px;
+}
+#proms h1 {
+    color: #ffffff;
+    text-align: center;
+}
+#proms h3 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 100;
+}
+#fbox {
+    display: flex;
+    background-color: #ffffff00;
+    justify-content: space-between;
+    align-items: start;
+}
+#vbox {
+    width: 100%;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: right;
+    gap: 3px;
+}
+#vbox2 {
+    width: 80%;
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+#X {
+    display: none;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+}
+.btn-b {
+    min-width: 190px;
+    padding: 10px;
+    min-height: 80px;
+    max-height: 98px;
+    background-color: rgb(40, 44, 52);
+    border-radius: 20px;
+}
+
+@media (max-width:1145px) {
+    #ht {
+        max-height: 300px;
+    }
+}
+
+.btn-b div {
+    background-color: rgb(117, 117, 117);
+    border-radius: 5px;
+    padding-bottom: 2px;
+}
+.btn-b span {
+    display: flex;
+    gap: 20px;
+    color: #ffffff;
+}
+.btn-b p {
+    font-size: small;
+    color: white;
+    margin-top: 0px;
+    transform: translateX(10px);
+    text-align: center;
+}
+.btn-b button {
+    width: 100%;
+    padding: 4px 3px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-b button:hover {
+    transform: scale(1.05);
+}
+.btn-b:hover {
+    transform: scale(1.03);
+}
+/* @media (min-width:860px) {
+    #box{
+        width: calc(80% - 20px);
+    }
+}
+@media (min-width:1260px) {
+    #box{
+        width: 80%;
+    }
+} */
+.file h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#btn-file {
+    transition: 0.2s;
+    color: aqua;
+}
+.file a {
+    background-color: rgb(51, 50, 50);
+    border-radius: 10px;
+    border: rgb(116, 116, 116) solid 1px;
+    padding: 3px;
+    margin-bottom: 20px;
+    transform: translateX(0px);
+}
+.file a:hover {
+    border: rgb(196, 196, 196) solid 1px;
+    transform: translateX(10px);
+}

@@ -1,0 +1,1773 @@
+<!-- localStorage.setItem("me", "Sox") -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Al Habh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="file" id="file">
+        <h2>Files</h2>
+        <div style="margin: 5px 0;"></div>
+        <a id="f-main" href="#" onclick="f_main()">⚙️〡 Main</a>
+        <a id="f-profile" href="#" onclick="f_profile()">🎴〡 Profile</a>
+        <a id="f-post" href="#" onclick="f_post()">🌐〡 Post</a>
+    </div>
+    <div class="file" id="admin">
+        <h2>Admins</h2>
+        <div style="margin: 5px 0;"></div>
+        <a id="a-sox" href="#" onclick="a_sox()"><span id="host0">👮‍♂️</span>〡 Sox</a>
+        <a id="a-toto" href="#" onclick="a_toto()"><span id="host1">👮‍♂️</span>〡 Toto</a>
+    </div>
+    <nav>
+        <header>
+            <a href="#" id="btn-file" onclick="file()">Files</a>
+            <a href="#" id="btn-post" onclick="post()">Post</a>
+            <a href="#" id="btn-users" onclick="users()">Users</a>
+            <a href="#" id="btn-dat" onclick="dat()">Data</a>
+            <a href="#" id="btn-admin" onclick="admin()">Admins</a>
+        </header>
+        <h1 id="my_user">sox</h1>
+        <div id="avt" onclick="log_out()"></div>
+    </nav>
+    <div id="box">
+        <div id="page_1">
+            <div class="btn-b" id="sc_p_create">
+                <span>
+                    <div>
+                        <h2>➕</h2>
+                    </div>
+                    <h2>Create Post</h2>
+                </span>
+                <p>Create new post <br>in Habh.</p>
+                <button onclick="sc_p_create()">Create</button>
+            </div>
+            <div class="btn-b" id="sc_p_edit">
+                <span>
+                    <div>
+                        <h2>✏️</h2>
+                    </div>
+                    <h2>Edit Post</h2>
+                </span>
+                <p>Edit any post<br>in Habh.</p>
+                <button onclick="sc_p_edit()">Edit</button>
+            </div>
+            <div class="btn-b" id="sc_p_remove">
+                <span>
+                    <div>
+                        <h2>❌</h2>
+                    </div>
+                    <h2>Remove Post</h2>
+                </span>
+                <p>Remove post data<br>in Habh.</p>
+                <button onclick="sc_p_remove()">Remove</button>
+            </div>
+            <div class="btn-b" id="sc_p_delete_com">
+                <span>
+                    <div>
+                        <h2>⛔️</h2>
+                    </div>
+                    <h2>Delete comment</h2>
+                </span>
+                <p>Delete comments post<br>in Habh.</p>
+                <button onclick="sc_p_delete_com()">Delete</button>
+            </div>
+            <div class="btn-b" id="sc_p_add_ads">
+                <span>
+                    <div>
+                        <h2>⚖️</h2>
+                    </div>
+                    <h2>Add Ads</h2>
+                    <h4 style="color: goldenrod;">ˢᵒᵒⁿ</h4>
+                </span>
+                <p>Create post ads Timeout<br>in Habh.</p>
+                <button onclick="sc_p_add_ads()">Create</button>
+            </div>
+            <div class="btn-b" id="sc_p_star_habh">
+                <span>
+                    <div>
+                        <h2>⭐️</h2>
+                    </div>
+                    <h2>Star Habh</h2>
+                    <h4 style="color: goldenrod;">ˢᵒᵒⁿ</h4>
+                </span>
+                <p>Give best post star habh<br>in Habh.</p>
+                <button onclick="sc_p_star_habh()">Create</button>
+            </div>
+        </div>
+        <div id="page_2">
+            <div class="btn-b" id="sc_u_create">
+                <span>
+                    <div>
+                        <h2>👶</h2>
+                    </div>
+                    <h2>Create user</h2>
+                </span>
+                <p>Create new user <br> in Habh.</p>
+                <button onclick="sc_u_create()">Create</button>
+            </div>
+            <div class="btn-b" id="sc_u_remove">
+                <span>
+                    <div>
+                        <h2>👴</h2>
+                    </div>
+                    <h2>Remove user</h2>
+                </span>
+                <p>Delete user data<br> in Habh.</p>
+                <button onclick="sc_u_remove()">Remove</button>
+            </div>
+            <div class="btn-b" id="sc_u_controle">
+                <span>
+                    <div>
+                        <h2>⚙️</h2>
+                    </div>
+                    <h2>Controle user</h2>
+                </span>
+                <p>Controle user data <br> in Habh.</p>
+                <button onclick="sc_u_controle()">Controle</button>
+            </div>
+            <div class="btn-b" id="sc_u_block">
+                <span>
+                    <div>
+                        <h2>🔒</h2>
+                    </div>
+                    <h2>Block user</h2>
+                </span>
+                <p>Give block to user <br> in Habh.</p>
+                <button onclick="sc_u_block()">Block</button>
+            </div>
+            <div class="btn-b" id="sc_u_unblock">
+                <span>
+                    <div>
+                        <h2>🔓</h2>
+                    </div>
+                    <h2>Unblock user</h2>
+                </span>
+                <p>Remove block to user <br> in Habh.</p>
+                <button onclick="sc_u_unblock()">Unblock</button>
+            </div>
+            <div class="btn-b" id="sc_u_add_bot">
+                <span>
+                    <div>
+                        <h2>🤖</h2>
+                    </div>
+                    <h2>Add bot</h2>
+                </span>
+                <p>Create user 24h <br> in Habh.</p>
+                <button onclick="sc_u_add_bot()">Create</button>
+            </div>
+            <div class="btn-b" id="sc_u_warn">
+                <span>
+                    <div>
+                        <h2>⚠️</h2>
+                    </div>
+                    <h2>Warn user</h2>
+                </span>
+                <p>Give warn to user <br> in Habh.</p>
+                <button onclick="sc_u_warn()">Warn</button>
+            </div>
+            <div class="btn-b" id="sc_u_system_warn">
+                <span>
+                    <div>
+                        <h2>♻️</h2>
+                    </div>
+                    <h2>System Warn</h2>
+                </span>
+                <p>System warnings log<br> in Habh.</p>
+                <button onclick="sc_u_system_warn()">Controle</button>
+            </div>
+            <div class="btn-b" id="sc_u_role">
+                <span>
+                    <div>
+                        <h2>🌐</h2>
+                    </div>
+                    <h2>Role user</h2>
+                </span>
+                <p>Give role to user<br> in Habh.</p>
+                <button onclick="sc_u_role()">Give</button>
+            </div>
+            <div class="btn-b" id="sc_u_system_role">
+                <span>
+                    <div>
+                        <h2>🧰</h2>
+                    </div>
+                    <h2>System roles</h2>
+                </span>
+                <p>System roles Level<br> in Habh.</p>
+                <button onclick="sc_u_system_role()">Controle</button>
+            </div>
+        </div>
+        <div id="page_3">
+            <div class="btn-b" id="sc_d_join">
+                <span>
+                    <div>
+                        <h2>📂</h2>
+                    </div>
+                    <h2>Join Data</h2>
+                    <h6 style="color: tan;">ᴱᴺᴳᴵᴺᴱ</h6>
+                </span>
+                <p>Enter code to Join<br>in Data.</p>
+                <button onclick="sc_d_join()">Join</button>
+            </div>
+        </div>
+        <div id="proms">
+            <h1>Info</h1>
+            <h3 id="data-user"></h3>
+            <div class="btn-b" id="pop1">
+                <span>
+                    <div>
+                        <h2>📁</h2>
+                    </div>
+                    <h2>Files Permissions</h2>
+                </span>
+                <p>Modifying File Permissions In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px;" id="s" onclick="files()">🔒</button>
+                    <div id="vbox">
+                        <button style="width: 10%; min-width: 50px; max-width: 60px;" id="s1" onclick="s_main()">Main</button>
+                        <button style="width: 10%; min-width: 50px; max-width: 60px;" id="s2" onclick="s_profile()">Profile</button>
+                        <button style="width: 10%; min-width: 50px; max-width: 60px;" id="s3" onclick="s_post()">Post</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-b" id="pop2">
+                <span>
+                    <div>
+                        <h2>🔖</h2>
+                    </div>
+                    <h2>Post Permissions</h2>
+                </span>
+                <p>Modifying Post Permissions In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px;" id="p" onclick="p()">🔒</button>
+                    <div id="vbox">
+                        <button style="width: 12%; min-width: 50px; max-width: 60px;" id="p1" onclick="pp1()">Create</button>
+                        <button style="width: 12%; min-width: 50px; max-width: 60px;" id="p2" onclick="pp2()">Edit</button>
+                        <button style="width: 12%; min-width: 60px; max-width: 70px;" id="p3" onclick="pp3()">Remove</button>
+                        <button style="width: 15%; min-width: 90px; max-width: 90px;" id="p4" onclick="pp4()">Delete com</button>
+                        <button style="width: 15%; min-width: 70px; max-width: 80px;" id="p5" onclick="pp5()">Add ads</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="p6" onclick="pp6()">Star Habh</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-b" id="ht">
+                <span>
+                    <div>
+                        <h2>👨‍💼</h2>
+                    </div>
+                    <h2>Users Permissions</h2>
+                </span>
+                <p>Modifying Users Permissions In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px; " id="u" onclick="u()">🔒</button>
+                    <div id="vbox2">
+                        <button style="width: 9%; min-width: 55px; max-width: 70px;" id="u1" onclick="uu1()">Create</button>
+                        <button style="width: 9%; min-width: 60px; max-width: 70px;" id="u2" onclick="uu2()">Remove</button>
+                        <button style="width: 9%; min-width: 65px; max-width: 75px;" id="u3" onclick="uu3()">Controle</button>
+                        <button style="width: 9%; min-width: 45px; max-width: 65px;" id="u4" onclick="uu4()">Block</button>
+                        <button style="width: 9%; min-width: 60px; max-width: 70px;" id="u5" onclick="uu5()">Unblock</button>
+                        <button style="width: 15%; min-width: 70px; max-width: 70px;" id="u6" onclick="uu6()">Add bot</button>
+                        <button style="width: 9%; min-width: 45px; max-width: 60px;" id="u7" onclick="uu7()">Warn</button>
+                        <button style="width: 30%; min-width: 100px; max-width: 100px;" id="u8" onclick="uu8()">System warn</button>
+                        <button style="width: 9%; min-width: 45px; max-width: 60px;" id="u9" onclick="uu9()">Role</button>
+                        <button style="width: 35%; min-width: 90px; max-width: 90px;" id="u10" onclick="uu10()">System role</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-b" id="pop4">
+                <span>
+                    <div>
+                        <h2>💾</h2>
+                    </div>
+                    <h2>Data Permissions</h2>
+                </span>
+                <p>Modifying Data Permissions In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px;" id="d" onclick="d()">🔒</button>
+                    <div id="vbox">
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="d1" onclick="dd1()">Join Data</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-b" id="host_only">
+                <span>
+                    <div>
+                        <h2>👑</h2>
+                    </div>
+                    <h2>Admin Permissions</h2>
+                    <h4 style="color: goldenrod;">ᴴᵒˢᵗ</h4>
+                </span>
+                <p>Modifying Admin Permissions In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px;" id="a" onclick="a()">🔒</button>
+                    <div id="vbox">
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="a1" onclick="aa1()">𝐇𝐎𝐒𝐓</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="a2" onclick="aa2()">𝐅𝐨𝐮𝐧𝐝𝐞𝐫</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="a3" onclick="aa3()">𝐀𝐃𝐌𝐈𝐍</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="a4" onclick="aa4()">𝐒𝐓𝐀𝐅𝐅</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-b" id="rolee">
+                <span>
+                    <div>
+                        <h2>🎎</h2>
+                    </div>
+                    <h2>Role Staff</h2>
+                </span>
+                <p>Give Role to Staff In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px;" id="r" onclick="r()">🔒</button>
+                    <div id="vbox">
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="r1" onclick="rr1()">Investor</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="r2" onclick="rr2()">Manager</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="r3" onclick="rr3()">Publisher</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="r4" onclick="rr4()">Developer</button>
+                        <button style="width: 15%; min-width: 80px; max-width: 90px;" id="r5" onclick="rr5()">Designer</button>
+                    </div>
+                </div>
+            </div>
+            <h1 id="X">⚠️ Your permissions do not allow you to use this command ⚠️</h1>
+            <div class="btn-b" id="magup">
+                <span>
+                    <div>
+                        <h2>null</h2>
+                    </div>
+                    <h2>null Permissions</h2>
+                    <h4 style="color: goldenrod;">ᴴᵒˢᵗ</h4>
+                </span>
+                <p>Modifying hacker Permissions In Habh.<br>|</p>
+                <div id="fbox">
+                    <button style="font-size: larger; padding: 0px; width: 10%; min-width: 50px; max-width: 80px;" id="s" onclick="files()">🔒</button>
+                    <div id="vbox">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var hr = 0
+        var namer="Sox"
+        var data = {}
+        function _data(){
+            fetch('http://localhost:9898/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    dat: data
+                })
+            })
+        }
+        var ng = 0
+        function clear(){
+            document.getElementById("f-main").style.transform = ""
+            document.getElementById("f-profile").style.transform = ""
+            document.getElementById("f-post").style.transform = ""
+            document.getElementById("a-sox").style.transform = ""
+            document.getElementById("a-toto").style.transform = ""
+        }
+        function log_out() {
+            const result = confirm("Are you sure you want to log out?");
+            
+            if (result) {
+                alert("You have been logged out.");
+                localStorage.removeItem("me");
+            } else {
+            }
+        }       
+        function a_sox(){
+            hr = 0;
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                ng = 1
+                namer = "Sox"
+                document.getElementById("proms").style.transform = "translateY(-950px)"
+            } else {
+                var trole = data?.Admins?.data?.[localStorage.getItem("me")]?.type
+                var xrole = data?.Admins?.data?.["Sox"]?.type
+                var t = scan_role(trole);
+                var x = scan_role(xrole);
+                console.log(t,x)
+                if (t != x && t > x && x != 0){
+                    ng = 1
+                    namer = "Sox"
+                    document.getElementById("proms").style.transform = "translateY(-950px)"
+                } else {
+                    ng = 1
+                    namer = "Sox"
+                    document.getElementById("proms").style.transform = "translateY(-950px)"
+                    hr = 1
+                }
+            }
+        }
+        function a_toto(){
+            hr = 0;
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                ng = 2
+                namer = "Toto"
+                document.getElementById("proms").style.transform = "translateY(-950px)"
+            } else {
+                var trole = data?.Admins?.data?.[localStorage.getItem("me")]?.type
+                var xrole = data?.Admins?.data?.["Toto"]?.type
+                var t = scan_role(trole);
+                var x = scan_role(xrole);
+                console.log(t,x)
+                if (t != x && t > x && x != 0){
+                    ng = 2
+                    namer = "Toto"
+                    document.getElementById("proms").style.transform = "translateY(-950px)"
+                } else {
+                    ng = 2
+                    namer = "Toto"
+                    document.getElementById("proms").style.transform = "translateY(-950px)"
+                    hr =1
+                }
+            }
+        }
+        function scan_role(trole){
+            if (trole == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                return 3;
+            } else if (trole == "𝐀𝐃𝐌𝐈𝐍"){
+                return 2
+            } else if (trole == "𝐒𝐓𝐀𝐅𝐅"){
+                return 1
+            } else {
+                return 0
+            }
+        }
+        function f_main(){
+            ng = 1
+        }
+        function f_profile(){
+            ng = 2
+        }
+        function f_post(){
+            ng = 3
+        }
+        var tg = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
+        function files(){
+            if (tg[3] == true){
+                tg[3] = false;
+                document.getElementById('s').innerText = "🔒"
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "✣ File")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`s`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[3] = true;
+                document.getElementById('s').innerText = "🔓"
+                data?.Admins?.data?.[namer]?.pr.push("✣ File")
+                _data()
+                document.getElementById(`s`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function p(){
+            if (tg[4] == true){
+                tg[4] = false;
+                document.getElementById('p').innerText = "🔒"
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "✣ Posts")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[4] = true;
+                document.getElementById('p').innerText = "🔓"
+                data?.Admins?.data?.[namer]?.pr.push("✣ Posts")
+                _data()
+                document.getElementById(`p`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function u(){
+            if (tg[11] == true){
+                tg[11] = false;
+                document.getElementById('u').innerText = "🔒"
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "✣ Users")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[11] = true;
+                document.getElementById('u').innerText = "🔓"
+                data?.Admins?.data?.[namer]?.pr.push("✣ Users")
+                _data()
+                document.getElementById(`u`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function d(){
+            if (tg[22] == true){
+                tg[22] = false;
+                document.getElementById('d').innerText = "🔒"
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "✣ Data")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`d`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[22] = true;
+                document.getElementById('d').innerText = "🔓"
+                data?.Admins?.data?.[namer]?.pr.push("✣ Data")
+                _data()
+                document.getElementById(`d`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function dd1(){
+            if (tg[25] == true){
+                tg[25] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Join Data")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`d1`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[25] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Join Data")
+                _data()
+                document.getElementById(`d1`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function a(){
+            if (tg[23] == true){
+                tg[23] = false;
+                document.getElementById('a').innerText = "🔒"
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "✣ Admin")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`a`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[23] = true;
+                document.getElementById('a').innerText = "🔓"
+                data?.Admins?.data?.[namer]?.pr.push("✣ Admin")
+                _data()
+                document.getElementById(`a`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function aa1(){
+            if (tg[26] == true){
+                tg[26] = false;
+                data.Admins.data[namer].type = "𝐇𝐎𝐒𝐓"
+                _data()
+                document.getElementById(`a1`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[26] = true;
+                data.Admins.data[namer].type = "𝐇𝐎𝐒𝐓"
+                _data()
+                document.getElementById(`a1`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function aa2(){
+            if (tg[27] == true){
+                tg[27] = false;
+                data.Admins.data[namer].type = "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"
+                _data()
+                document.getElementById(`a2`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[27] = true;
+                data.Admins.data[namer].type = "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"
+                _data()
+                document.getElementById(`a2`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function aa3(){
+            if (tg[28] == true){
+                tg[28] = false;
+                data.Admins.data[namer].type = "𝐀𝐃𝐌𝐈𝐍"
+                _data()
+                document.getElementById(`a3`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[28] = true;
+                data.Admins.data[namer].type = "𝐀𝐃𝐌𝐈𝐍"
+                _data()
+                document.getElementById(`a3`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function aa4(){
+            if (tg[29] == true){
+                tg[29] = false;
+                data.Admins.data[namer].type = "𝐒𝐓𝐀𝐅𝐅"
+                _data()
+                document.getElementById(`a4`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[29] = true;
+                data.Admins.data[namer].type = "𝐒𝐓𝐀𝐅𝐅"
+                _data()
+                document.getElementById(`a4`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function r(){
+            if (tg[24] == true){
+                tg[24] = false;
+                document.getElementById('r').innerText = "🔒"
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "✣ Role")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`r`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[24] = true;
+                document.getElementById('r').innerText = "🔓"
+                data?.Admins?.data?.[namer]?.pr.push("✣ Role")
+                _data()
+                document.getElementById(`r`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function rr1(){
+            if (tg[30] == true){
+                tg[30] = false;
+                data.Admins.data[namer].role = "Investor"
+                _data()
+                document.getElementById(`r1`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[30] = true;
+                data.Admins.data[namer].role = "Investor"
+                _data()
+                document.getElementById(`r1`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function rr2(){
+            if (tg[31] == true){
+                tg[31] = false;
+                data.Admins.data[namer].role = "Manager"
+                _data()
+                document.getElementById(`r2`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[31] = true;
+                data.Admins.data[namer].role = "Manager"
+                _data()
+                document.getElementById(`r2`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function rr3(){
+            if (tg[32] == true){
+                tg[32] = false;
+                data.Admins.data[namer].role = "Publisher"
+                _data()
+                document.getElementById(`r3`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[32] = true;
+                data.Admins.data[namer].role = "Publisher"
+                _data()
+                document.getElementById(`r3`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function rr4(){
+            if (tg[33] == true){
+                tg[33] = false;
+                data.Admins.data[namer].role = "Developer"
+                _data()
+                document.getElementById(`r4`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[33] = true;
+                data.Admins.data[namer].role = "Developer"
+                _data()
+                document.getElementById(`r4`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function rr5(){
+            if (tg[34] == true){
+                tg[34] = false;
+                data.Admins.data[namer].role = "Designer"
+                _data()
+                document.getElementById(`r5`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[34] = true;
+                data.Admins.data[namer].role = "Designer"
+                _data()
+                document.getElementById(`r5`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu1(){
+            if (tg[12] == true){
+                tg[12] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Create user")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u1`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[12] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Create user")
+                _data()
+                document.getElementById(`u1`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu2(){
+            if (tg[13] == true){
+                tg[13] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Remove user")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u2`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[13] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Remove user")
+                _data()
+                document.getElementById(`u2`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu3(){
+            if (tg[14] == true){
+                tg[14] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Controle user")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u3`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[14] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Controle user")
+                _data()
+                document.getElementById(`u3`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu4(){
+            if (tg[15] == true){
+                tg[15] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Block user")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u4`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[15] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Block user")
+                _data()
+                document.getElementById(`u4`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu5(){
+            if (tg[16] == true){
+                tg[16] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Unblock user")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u5`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[16] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Unblock user")
+                _data()
+                document.getElementById(`u5`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu6(){
+            if (tg[17] == true){
+                tg[17] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Add bot")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u6`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[17] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Add bot")
+                _data()
+                document.getElementById(`u6`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu7(){
+            if (tg[18] == true){
+                tg[18] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Warn")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u7`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[18] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Warn")
+                _data()
+                document.getElementById(`u7`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu8(){
+            if (tg[19] == true){
+                tg[19] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "System Warn")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u8`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[19] = true;
+                data?.Admins?.data?.[namer]?.pr.push("System Warn")
+                _data()
+                document.getElementById(`u8`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu9(){
+            if (tg[20] == true){
+                tg[20] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Role users")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u9`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[20] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Role users")
+                _data()
+                document.getElementById(`u9`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function uu10(){
+            if (tg[21] == true){
+                tg[21] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "System Role")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`u10`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[21] = true;
+                data?.Admins?.data?.[namer]?.pr.push("System Role")
+                _data()
+                document.getElementById(`u10`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function pp1(){
+            if (tg[5] == true){
+                tg[5] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Create")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p1`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[5] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Create")
+                _data()
+                document.getElementById(`p1`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function pp2(){
+            if (tg[6] == true){
+                tg[6] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Edit")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p2`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[6] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Edit")
+                _data()
+                document.getElementById(`p2`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function pp3(){
+            if (tg[7] == true){
+                tg[7] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Remove")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p3`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[7] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Remove")
+                _data()
+                document.getElementById(`p3`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function pp4(){
+            if (tg[8] == true){
+                tg[8] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Delete com")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p4`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[8] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Delete com")
+                _data()
+                document.getElementById(`p4`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function pp5(){
+            if (tg[9] == true){
+                tg[9] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Add ads")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p5`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[9] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Add ads")
+                _data()
+                document.getElementById(`p5`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function pp6(){
+            if (tg[10] == true){
+                tg[10] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Star Habh")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`p6`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[10] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Star Habh")
+                _data()
+                document.getElementById(`p6`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function s_main(){
+            if (tg[0] == true){
+                tg[0] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Main")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`s1`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[0] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Main")
+                _data()
+                document.getElementById(`s1`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function s_profile(){
+            if (tg[1] == true){
+                tg[1] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Profile")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`s2`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[1] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Profile")
+                _data()
+                document.getElementById(`s2`).style.backgroundColor = "darkcyan"
+            }
+        }
+        function s_post(){
+            if (tg[2] == true){
+                tg[2] = false;
+                var df = data?.Admins?.data?.[namer]?.pr?.filter(item => item !== "Post")
+                data.Admins.data[namer].pr = df
+                _data()
+                document.getElementById(`s3`).style.backgroundColor = "#ffffff"
+            } else {
+                tg[2] = true;
+                data?.Admins?.data?.[namer]?.pr.push("Post")
+                _data()
+                document.getElementById(`s3`).style.backgroundColor = "darkcyan"
+            }
+        }
+        var vg = [false,false,false,false,false]
+        function ccc(){
+                vg[1] = false
+                vg[0] = false
+                vg[2] = false
+                vg[3] = false
+                vg[4] = false
+                document.getElementById("file").style.transform = "translateX(-100vh)"
+                document.getElementById("admin").style.transform = "translateX(-100vh)"
+                document.getElementById("box").style.width = "100%"
+                document.getElementById("page_1").style.display = "none"
+                document.getElementById("page_2").style.display = "none"
+                document.getElementById("page_3").style.display = "none"
+                document.getElementById("proms").style.display = "none"
+            }
+            if (vg[0] == false){
+                ccc()
+                clear()
+                document.getElementById("file").style.transform = "translateX(-100vh)"
+                document.getElementById("box").style.width = "100%"
+            } else {
+                ccc()
+                clear()
+                ng = 0
+                document.getElementById("file").style.transform = "translateX(0)"
+                document.getElementById("box").style.width = "calc(80% - 40px)"
+            }
+        function file(){
+            if (vg[0] == true){
+                ccc()
+                document.getElementById("file").style.transform = "translateX(-100vh)"
+                vg[0] = false
+                document.getElementById("box").style.width = "100%"
+            } else {
+                ccc()
+                vg[0] = true
+                clear()
+                ng = 0
+                document.getElementById("file").style.transform = "translateX(0)"
+                document.getElementById("box").style.width = "calc(80% - 40px)"
+            }
+        }
+        function post(){
+            if (vg[1] == true){
+                ccc()
+                vg[1] = false
+            } else {
+                ccc()
+                vg[1] = true
+            }
+        }
+        function users(){
+            if (vg[2] == true){
+                ccc()
+                vg[2] = false
+            } else {
+                ccc()
+                vg[2] = true
+            }
+        }
+        function dat(){
+            if (vg[3] == true){
+                ccc()
+                vg[3] = false
+            } else {
+                ccc()
+                vg[3] = true
+            }
+        }
+        function admin(){
+            hr = 0
+            document.getElementById("X").style.display = "none"
+            if (vg[4] == true){
+                ccc()
+                document.getElementById("admin").style.transform = "translateX(-100vh)"
+                vg[4] = false
+                document.getElementById("box").style.width = "100%"
+            } else {
+                ccc()
+                vg[4] = true
+                clear()
+                ng = 0
+                document.getElementById("admin").style.transform = "translateX(0)"
+                document.getElementById("box").style.width = "calc(80% - 40px)"
+            }
+        }
+        var ih = false
+        function scane(){
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ File") {
+                    tg[3] = true
+                    document.getElementById(`s`).style.backgroundColor = "darkcyan"
+                    document.getElementById('s').innerText = "🔓"
+                    break;
+                } else {
+                    tg[3] = false
+                    document.getElementById(`s`).style.backgroundColor = "#ffffff"
+                    document.getElementById('s').innerText = "🔒"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ Posts") {
+                    tg[4] = true
+                    document.getElementById(`p`).style.backgroundColor = "darkcyan"
+                    document.getElementById('p').innerText = "🔓"
+                    break;
+                } else {
+                    tg[4] = false
+                    document.getElementById(`p`).style.backgroundColor = "#ffffff"
+                    document.getElementById('p').innerText = "🔒"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ Users") {
+                    tg[11] = true
+                    document.getElementById(`u`).style.backgroundColor = "darkcyan"
+                    document.getElementById('u').innerText = "🔓"
+                    break;
+                } else {
+                    tg[11] = false
+                    document.getElementById(`u`).style.backgroundColor = "#ffffff"
+                    document.getElementById('u').innerText = "🔒"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ Users") {
+                    tg[11] = true
+                    document.getElementById(`u`).style.backgroundColor = "darkcyan"
+                    document.getElementById('u').innerText = "🔓"
+                    break;
+                } else {
+                    tg[11] = false
+                    document.getElementById(`u`).style.backgroundColor = "#ffffff"
+                    document.getElementById('u').innerText = "🔒"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ Data") {
+                    tg[22] = true
+                    document.getElementById(`d`).style.backgroundColor = "darkcyan"
+                    document.getElementById('d').innerText = "🔓"
+                    break;
+                } else {
+                    tg[22] = false
+                    document.getElementById(`d`).style.backgroundColor = "#ffffff"
+                    document.getElementById('d').innerText = "🔒"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Join Data") {
+                    tg[25] = true
+                    document.getElementById(`d1`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[25] = false
+                    document.getElementById(`d1`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ Admin") {
+                    tg[23] = true
+                    document.getElementById(`a`).style.backgroundColor = "darkcyan"
+                    document.getElementById('a').innerText = "🔓"
+                    break;
+                } else {
+                    tg[23] = false
+                    document.getElementById(`a`).style.backgroundColor = "#ffffff"
+                    document.getElementById('a').innerText = "🔒"
+                }
+            }
+            if (data?.Admins?.data?.[namer]?.type == "𝐇𝐎𝐒𝐓") {
+                tg[26] = true
+                document.getElementById(`a1`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[26] = false
+                document.getElementById(`a1`).style.backgroundColor = "#ffffff"
+            }
+            if (data?.Admins?.data?.[namer]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫") {
+                tg[27] = true
+                document.getElementById(`a2`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[27] = false
+                document.getElementById(`a2`).style.backgroundColor = "#ffffff"
+            }
+            if (data?.Admins?.data?.[namer]?.type == "𝐀𝐃𝐌𝐈𝐍") {
+                tg[28] = true
+                document.getElementById(`a3`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[28] = false
+                document.getElementById(`a3`).style.backgroundColor = "#ffffff"
+            }
+            if (data?.Admins?.data?.[namer]?.type == "𝐒𝐓𝐀𝐅𝐅") {
+                tg[29] = true
+                document.getElementById(`a4`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[29] = false
+                document.getElementById(`a4`).style.backgroundColor = "#ffffff"
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "✣ Role") {
+                    tg[24] = true
+                    document.getElementById(`r`).style.backgroundColor = "darkcyan"
+                    document.getElementById('r').innerText = "🔓"
+                    break;
+                } else {
+                    tg[24] = false
+                    document.getElementById(`r`).style.backgroundColor = "#ffffff"
+                    document.getElementById('r').innerText = "🔒"
+                }
+            }
+            if (data.Admins?.data?.[namer]?.role == "Investor") {
+                tg[30] = true
+                document.getElementById(`r1`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[30] = false
+                document.getElementById(`r1`).style.backgroundColor = "#ffffff"
+            }
+            if (data.Admins?.data?.[namer]?.role == "Manager") {
+                tg[31] = true
+                document.getElementById(`r2`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[31] = false
+                document.getElementById(`r2`).style.backgroundColor = "#ffffff"
+            }
+            if (data.Admins?.data?.[namer]?.role == "Publisher") {
+                tg[32] = true
+                document.getElementById(`r3`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[32] = false
+                document.getElementById(`r3`).style.backgroundColor = "#ffffff"
+            }
+            if (data.Admins?.data?.[namer]?.role == "Developer") {
+                tg[33] = true
+                document.getElementById(`r4`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[33] = false
+                document.getElementById(`r4`).style.backgroundColor = "#ffffff"
+            }
+            if (data.Admins?.data?.[namer]?.role == "Designer") {
+                tg[34] = true
+                document.getElementById(`r5`).style.backgroundColor = "darkcyan"
+            } else {
+                tg[34] = false
+                document.getElementById(`r5`).style.backgroundColor = "#ffffff"
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Create user") {
+                    tg[12] = true
+                    document.getElementById(`u1`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[12] = false
+                    document.getElementById(`u1`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Remove user") {
+                    tg[13] = true
+                    document.getElementById(`u2`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[13] = false
+                    document.getElementById(`u2`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Controle user") {
+                    tg[14] = true
+                    document.getElementById(`u3`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[14] = false
+                    document.getElementById(`u3`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Block user") {
+                    tg[15] = true
+                    document.getElementById(`u4`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[15] = false
+                    document.getElementById(`u4`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Unblock user") {
+                    tg[16] = true
+                    document.getElementById(`u5`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[16] = false
+                    document.getElementById(`u5`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Add bot") {
+                    tg[17] = true
+                    document.getElementById(`u6`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[17] = false
+                    document.getElementById(`u6`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Warn") {
+                    tg[18] = true
+                    document.getElementById(`u7`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[18] = false
+                    document.getElementById(`u7`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "System Warn") {
+                    tg[19] = true
+                    document.getElementById(`u8`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[19] = false
+                    document.getElementById(`u8`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Role users") {
+                    tg[20] = true
+                    document.getElementById(`u9`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[20] = false
+                    document.getElementById(`u9`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "System Role") {
+                    tg[21] = true
+                    document.getElementById(`u10`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[21] = false
+                    document.getElementById(`u10`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Create") {
+                    tg[5] = true
+                    document.getElementById(`p1`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[5] = false
+                    document.getElementById(`p1`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Edit") {
+                    tg[6] = true
+                    document.getElementById(`p2`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[6] = false
+                    document.getElementById(`p2`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Remove") {
+                    tg[7] = true
+                    document.getElementById(`p3`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[7] = false
+                    document.getElementById(`p3`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Delete com") {
+                    tg[8] = true
+                    document.getElementById(`p4`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[8] = false
+                    document.getElementById(`p4`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Add ads") {
+                    tg[9] = true
+                    document.getElementById(`p5`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[9] = false
+                    document.getElementById(`p5`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Star Habh") {
+                    tg[10] = true
+                    document.getElementById(`p6`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[10] = false
+                    document.getElementById(`p6`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Post") {
+                    tg[2] = true
+                    document.getElementById(`s3`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[2] = false
+                    document.getElementById(`s3`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Profile") {
+                    tg[1] = true
+                    document.getElementById(`s2`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[1] = false
+                    document.getElementById(`s2`).style.backgroundColor = "#ffffff"
+                }
+            }
+            for (let i = 0; i < data?.Admins?.data?.[namer]?.pr?.length; i++) {
+                if (data.Admins?.data?.[namer]?.pr[i] == "Main") {
+                    tg[0] = true
+                    document.getElementById(`s1`).style.backgroundColor = "darkcyan"
+                    break;
+                } else {
+                    tg[0] = false
+                    document.getElementById(`s1`).style.backgroundColor = "#ffffff"
+                }
+            }
+        }
+        function state_btn(){
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("✣ File") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("btn-file").style.display = "block"
+            } else {
+                document.getElementById("btn-file").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("✣ Posts") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("btn-post").style.display = "block"
+            } else {
+                document.getElementById("btn-post").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("✣ Users") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("btn-users").style.display = "block"
+            } else {
+                document.getElementById("btn-users").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("✣ Data") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("btn-dat").style.display = "block"
+            } else {
+                document.getElementById("btn-dat").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("✣ Admin") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("btn-admin").style.display = "block"
+            } else {
+                document.getElementById("btn-admin").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("✣ Role") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("rolee").style.display = "block"
+            } else {
+                document.getElementById("rolee").style.display = "none"
+            }
+        }
+        function files_btn(){
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Main") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("f-main").style.display = "block"
+            } else {
+                document.getElementById("f-main").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Profile") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("f-profile").style.display = "block"
+            } else {
+                document.getElementById("f-profile").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Post") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("f-post").style.display = "block"
+            } else {
+                document.getElementById("f-post").style.display = "none"
+            }
+        }
+        function Post_btn(){
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Create") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_p_create").style.display = "block"
+            } else {
+                document.getElementById("sc_p_create").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Edit") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_p_edit").style.display = "block"
+            } else {
+                document.getElementById("sc_p_edit").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Remove") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_p_remove").style.display = "block"
+            } else {
+                document.getElementById("sc_p_remove").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Delete com") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_p_delete_com").style.display = "block"
+            } else {
+                document.getElementById("sc_p_delete_com").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Add ads") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_p_add_ads").style.display = "block"
+            } else {
+                document.getElementById("sc_p_add_ads").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Star Habh") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_p_star_habh").style.display = "block"
+            } else {
+                document.getElementById("sc_p_star_habh").style.display = "none"
+            }
+        }
+        function Users_btn(){
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Create user") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_create").style.display = "block"
+            } else {
+                document.getElementById("sc_u_create").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Remove user") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_remove").style.display = "block"
+            } else {
+                document.getElementById("sc_u_remove").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Controle user") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_controle").style.display = "block"
+            } else {
+                document.getElementById("sc_u_controle").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Block user") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_block").style.display = "block"
+            } else {
+                document.getElementById("sc_u_block").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Unblock user") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_unblock").style.display = "block"
+            } else {
+                document.getElementById("sc_u_unblock").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Add bot") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_add_bot").style.display = "block"
+            } else {
+                document.getElementById("sc_u_add_bot").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Warn") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_warn").style.display = "block"
+            } else {
+                document.getElementById("sc_u_warn").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("System Warn") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_system_warn").style.display = "block"
+            } else {
+                document.getElementById("sc_u_system_warn").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Role users") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_role").style.display = "block"
+            } else {
+                document.getElementById("sc_u_role").style.display = "none"
+            }
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("System Role") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_u_system_role").style.display = "block"
+            } else {
+                document.getElementById("sc_u_system_role").style.display = "none"
+            }
+        }
+        function Data_btn(){
+            if (data?.Admins?.data[localStorage.getItem("me")]?.pr?.includes("Join Data") || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("sc_d_join").style.display = "block"
+            } else {
+                document.getElementById("sc_d_join").style.display = "none"
+            }
+        }
+        function Admins_btn(){
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("host_only").style.display = "block"
+            } else {
+                document.getElementById("host_only").style.display = "none"
+            }
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("pop1").style.display = "block"
+            } else if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                document.getElementById("pop1").style.display = "block"
+            } else {
+                document.getElementById("pop1").style.display = "none"
+            }
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("pop2").style.display = "block"
+            } else if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                document.getElementById("pop2").style.display = "block"
+            } else if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐀𝐃𝐌𝐈𝐍"){
+                document.getElementById("pop2").style.display = "block"
+            } else {
+                document.getElementById("pop2").style.display = "none"
+            }
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("ht").style.display = "block"
+            } else if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                document.getElementById("ht").style.display = "block"
+            } else if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐀𝐃𝐌𝐈𝐍"){
+                document.getElementById("ht").style.display = "block"
+            } else {
+                document.getElementById("ht").style.display = "none"
+            }
+            if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                document.getElementById("pop4").style.display = "block"
+            } else if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                document.getElementById("pop4").style.display = "block"
+            } else {
+                document.getElementById("pop4").style.display = "none"
+            }
+        }
+        var command = 0 
+        setInterval(()=>{
+            if (command == 0){
+                if (localStorage.getItem("me") == "0" || !localStorage.getItem("me")){
+                    window.location.href = "sign-in.html";
+                    command = 1
+                }
+            }
+            if (hr == 1){
+                document.getElementById("pop1").style.display = "none"
+                document.getElementById("pop2").style.display = "none"
+                document.getElementById("ht").style.display = "none"
+                document.getElementById("pop4").style.display = "none"
+                document.getElementById("rolee").style.display = "none"
+                document.getElementById("X").style.display = "block"
+            } else {
+                document.getElementById("X").style.display = "none"
+                scane();
+                state_btn();
+                files_btn();
+                Post_btn();
+                Users_btn();
+                Data_btn();
+                Admins_btn();
+            }
+            if (vg[4] != true){
+                document.getElementById("X").style.display = "none"
+            }
+            document.getElementById(`my_user`).innerText = localStorage.getItem("me")
+            for (let i = 0; i < data?.Admins?.users?.length; i++) {
+                if (data?.Admins?.data?.[data?.Admins?.users[i]]?.type == "𝐇𝐎𝐒𝐓"){
+                    if (data?.Admins?.data[data?.Admins?.users[i]]?.sex == "man"){
+                        document.getElementById(`host${i}`).innerText = "🤴"
+                    } else {
+                        document.getElementById(`host${i}`).innerText = "👸"
+                    }
+                } else if (data?.Admins?.data?.[data?.Admins?.users[i]]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                    if (data?.Admins?.data[data?.Admins?.users[i]]?.sex == "man"){
+                        document.getElementById(`host${i}`).innerText = "👨‍✈️"
+                    } else {
+                        document.getElementById(`host${i}`).innerText = "👩‍✈️"
+                    }
+                } else if (data?.Admins?.data?.[data?.Admins?.users[i]]?.type == "𝐀𝐃𝐌𝐈𝐍"){
+                    if (data?.Admins?.data[data?.Admins?.users[i]]?.sex == "man"){
+                        document.getElementById(`host${i}`).innerText = "👮"
+                    } else {
+                        document.getElementById(`host${i}`).innerText = "👮‍♀️"
+                    }
+                } else if (data?.Admins?.data?.[data?.Admins?.users[i]]?.type == "𝐒𝐓𝐀𝐅𝐅"){
+                    if (data?.Admins?.data[data?.Admins?.users[i]]?.sex == "man"){
+                        document.getElementById(`host${i}`).innerText = "🧑"
+                    } else {
+                        document.getElementById(`host${i}`).innerText = "👧"
+                    }
+               } else {
+                    if (data?.Admins?.data[data?.Admins?.users[i]]?.sex == "man"){
+                        document.getElementById(`host${i}`).innerText = "🧑"
+                    } else {
+                        document.getElementById(`host${i}`).innerText = "👧"
+                    }
+                }
+            }
+            if (ng == 1){
+                clear()
+                document.getElementById("f-main").style.transform = "translateX(10px)"
+                document.getElementById("a-sox").style.transform = "translateX(10px)"
+                // if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓"){
+                     if (vg[4] == true){
+                        var a = data?.Admins?.data?.[namer]?.pr?.join(" | ")
+                        const name = "Sox"
+                        document.getElementById("data-user").innerText = `Name: ${name}
+                        Sex: ${data.Admins.data[name].sex}
+                        Role: ${data.Admins.data[name].role}
+                        Type: ${data?.Admins?.data?.[name]?.type}
+                        Permissions: ${a}
+                        `
+                        document.getElementById("proms").style.display = "flex"
+                        setTimeout(()=>{
+                            document.getElementById("proms").style.transform = ""
+                        },0)
+                    }
+            } else if (ng == 2){
+                clear()
+                document.getElementById("f-profile").style.transform = "translateX(10px)"
+                document.getElementById("a-toto").style.transform = "translateX(10px)" 
+                // if (data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐇𝐎𝐒𝐓" || data?.Admins?.data?.[localStorage.getItem("me")]?.type == "𝐅𝐨𝐮𝐧𝐝𝐞𝐫"){
+                    if (vg[4] == true){
+                        const name = "Toto"
+                        var a = data?.Admins?.data?.[namer]?.pr?.join(" | ")
+                        document.getElementById("data-user").innerText = `Name: ${name}
+                        Sex: ${data.Admins.data[name].sex}
+                        Role: ${data.Admins.data[name].role}
+                        Type: ${data?.Admins?.data?.[name]?.type}
+                        Permissions: ${a}`
+                        document.getElementById("proms").style.display = "flex"
+                        setTimeout(()=>{
+                            document.getElementById("proms").style.transform = ""
+                        },0)
+                    // }
+                }
+            } else if (ng == 3){
+                clear()
+                document.getElementById("f-post").style.transform = "translateX(10px)"
+            }
+            if (vg[0] == true){
+                document.getElementById("btn-file").style.color = "aqua"
+            } else {
+                document.getElementById("btn-file").style.color = "white"
+            }
+            if (vg[1] == true){
+                document.getElementById("btn-post").style.color = "aqua"
+                document.getElementById("page_1").style.display = "flex"
+                setTimeout(()=>{
+                    document.getElementById("page_1").style.transform = ""
+                },0)
+            } else {
+
+                document.getElementById("btn-post").style.color = "white"
+                document.getElementById("page_1").style.transform = "translateY(-950px)"
+                setTimeout(()=>{
+                    document.getElementById("page_1").style.display = "none"
+                },10)
+
+            }
+            if (vg[2] == true){
+                document.getElementById("btn-users").style.color = "aqua"
+                document.getElementById("page_2").style.display = "flex"
+                setTimeout(()=>{
+                    document.getElementById("page_2").style.transform = ""
+                },0)
+            } else {
+
+                document.getElementById("btn-users").style.color = "white"
+                document.getElementById("page_2").style.transform = "translateY(-950px)"
+                setTimeout(()=>{
+                    document.getElementById("page_2").style.display = "none"
+                },10)
+
+            }
+            if (vg[3] == true){
+                document.getElementById("btn-dat").style.color = "aqua"
+                document.getElementById("page_3").style.display = "flex"
+                setTimeout(()=>{
+                    document.getElementById("page_3").style.transform = ""
+                },0)
+            } else {
+                document.getElementById("btn-dat").style.color = "white"
+                document.getElementById("page_3").style.transform = "translateY(-950px)"
+                setTimeout(()=>{
+                    document.getElementById("page_3").style.display = "none"
+                },10)
+
+            }
+            if (vg[4] == true){
+                document.getElementById("btn-admin").style.color = "aqua"
+            } else {
+                document.getElementById("btn-admin").style.color = "white"
+            }
+            fetch('http://localhost:9898/data')
+                .then(response => response.json())
+                .then(dat => {
+                    data = dat;
+                    // if (dat.users.s[0] == "OFF"){
+                    //     ih = false
+                    //     document.getElementById('data').innerText = "ON";
+                    // } else {
+                    //     document.getElementById('data').innerText = "OFF";
+                    //     ih = true
+                    // }
+                })
+                .catch(error => console.error('Error:', error));
+        },100)
+        function fg() {
+            if (ih == false){
+                fetch('http://localhost:9898/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        g: "ON"
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').innerText = data;
+                })
+                .catch(error => console.error('Error:', error));
+                ih = true
+            } else {
+                fetch('http://localhost:9898/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        g: "OFF"
+                    })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('output').innerText = data;
+                })
+                .catch(error => console.error('Error:', error));
+                ih = false
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

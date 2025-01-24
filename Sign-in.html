@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Al Habh</title>
+    <link rel="stylesheet" href="s2.css">
+</head>
+<body>
+    <div id="box">
+        <h1>Sign in</h1>
+        <div id="inp">
+            <div class="vf">
+                <h3>Username</h3>
+                <input type="email" id="name" class="input" placeholder="Enter your name" id="nameInput">
+            </div>
+            <div class="vf">
+                <h3>Password</h3>
+                <input type="password" id="pas" class="input" placeholder="Enter your password" id="nameInput">
+            </div>
+        </div>
+    </div>
+    <script>
+        var command = 0
+        var data = {}
+        setInterval(()=>{
+            var n = document.getElementById("name").value
+            var p = document.getElementById("pas").value
+            if (data?.Admins?.users?.includes(n)){
+                if (data?.Admins?.data?.[n]?.pas == p){
+                    localStorage.setItem("me",n)
+                }
+            }
+            if (command == 0){
+                if (localStorage.getItem("me") != "0" && localStorage.getItem("me")){
+                    window.location.href = "index.html";
+                    command = 1
+                }
+            }  
+        },100)
+        fetch('http://localhost:9898/data')
+                .then(response => response.json())
+                .then(dat => {
+                    data = dat;
+                    // if (dat.users.s[0] == "OFF"){
+                    //     ih = false
+                    //     document.getElementById('data').innerText = "ON";
+                    // } else {
+                    //     document.getElementById('data').innerText = "OFF";
+                    //     ih = true
+                    // }
+                })
+                .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
